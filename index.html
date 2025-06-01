@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="wrapper-class">
+    <h1>Weather App</h1>
+    <div class="tab-container">
+      <p class="tab current-tab" data-userWeather>Your Weather</p>
+      <p class="tab" data-searchWeather>Search Weather</p>
+    </div>
+
+    <div class="weather-container">
+
+      <!-- grant location -->
+      <div class="grant-location-container">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Grant location Access</p>
+        <p>Grant access to get Weather Information</p>
+        <button class="btn" data-grantAccess>Grant Access</button>
+      </div>
+
+      <!-- search form -->
+      <form class="form-container" data-searchForm>
+        <input placeholder="Search city..." data-searchInput />
+        <button class="btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <!-- loading screen -->
+      <div class="loading-container">
+        <i class="fa-solid fa-spinner"></i>
+        <p>loading...</p>
+      </div>
+
+      <!-- show weather info -->
+      <div class="user-info-container">
+        <div class="name">
+          <p data-cityName></p>
+          <img data-cityIcon />
+        </div>
+
+        <p data-weatherDesc></p>
+        <img data-weatherIcon />
+        <p data-temp></p>
+
+        <!-- parameters -->
+        <div class="parameter-container">
+          <div class="parameter">
+            <i class="fa-solid fa-wind"></i>
+            <p>windspeed</p>
+            <p data-windspeed></p>
+          </div>
+
+          <div class="parameter">
+            <i class="fa-solid fa-droplet"></i>
+            <p>humidity</p>
+            <p data-humidity></p>
+          </div>
+
+          <div class="parameter">
+            <i class="fa-solid fa-cloud"></i>
+            <p>clouds</p>
+            <p data-clouds></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/b9f9d455cd.js" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
